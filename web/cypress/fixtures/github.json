@@ -1,0 +1,19 @@
+{
+    "Users": [
+        {
+            "name": "Vinicius Rezende",
+            "username": "ViniciusRezendeHubsoft",
+            "perfil": "Q.A."
+        },
+        {
+            "name": "Fernando Papito",
+            "username": "papitodev",
+            "perfil": "Desenvolvedor"
+        },
+        {
+            "name": "Fernando Papito",
+            "username": "qapapito",
+            "perfil": "Desenvolvedor"
+        }
+    ]
+}

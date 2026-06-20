@@ -1,0 +1,60 @@
+{
+  "personal": {
+    "name": "Vinicius Rezende",
+    "email": "vinicius.rezende@example.com.br",
+    "phone": "11999999999",
+    "consultancyType": "Individual",
+    "personType": "cpf",
+    "document": "17937827092",
+    "file": "C:/ninjaDoCypress/webdojo/web/cypress/fixtures/document.pdf",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur magna urna, scelerisque ac consectetur et, cursus nec sapien. Aliquam ipsum ligula, feugiat id fermentum quis, molestie vitae risus.",
+    "terms": true,
+    "discoveryChannelOptions": [
+      "Instagram",
+      "LinkedIn",
+      "Udemy",
+      "YouTube",
+      "Indicação de Amigo"
+    ],
+    "techOptions": [
+      "Python",
+      "Java",
+      "C#",
+      "Ruby",
+      "JavaScript",
+      "TypeScript",
+      "Go",
+      "PHP",
+      "Cypress",
+      "Selenium",
+      "Playwright",
+      "Appium"
+    ]
+  },
+  "company": {
+    "name": "Vinicius Rezende",
+    "email": "vinicius.rezende@example.com.br",
+    "phone": "11999999999",
+    "consultancyType": "In Company",
+    "personType": "cnpj",
+    "document": "24321414000180",
+    "discoveryChannel": "LinkedIn",
+    "file": "C:/ninjaDoCypress/webdojo/web/cypress/fixtures/document.pdf",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur magna urna, scelerisque ac consectetur et, cursus nec sapien. Aliquam ipsum ligula, feugiat id fermentum quis, molestie vitae risus.",
+    "terms": true,
+    "techOptions": [
+      "Python",
+      "Java",
+      "C#",
+      "Ruby",
+      "JavaScript",
+      "TypeScript",
+      "Go",
+      "PHP",
+      "Cypress",
+      "Selenium",
+      "Playwright",
+      "Appium"
+    ]
+  }
+}
