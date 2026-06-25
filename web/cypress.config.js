@@ -4,8 +4,11 @@ module.exports = defineConfig({
   allowCypressEnv: false,
 
   env: {
-    username: 'papito@webdojo.com',
-    password: 'katana123'
+    oneUsername: 'papito@webdojo.com',
+    onePassword: 'katana123',
+    twoName: 'Vinicius',
+    twoUsername: 'testevinicius@teste.com.br',
+    twoPassword: 'Senha@123'
   },
 
   e2e: {

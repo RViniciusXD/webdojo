@@ -4,7 +4,7 @@ services:
   # Serviço de banco de dados PostgreSQL
   db:
     container_name: dojo-db
-    image: postgres:13
+    image: postgres:16
     environment:
       - POSTGRES_USER=dba                 # Usuário do banco de dados
       - POSTGRES_PASSWORD=dba             # Senha do banco de dados

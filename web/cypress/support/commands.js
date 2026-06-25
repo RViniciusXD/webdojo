@@ -32,6 +32,30 @@ Cypress.Commands.add('start', () => {
     cy.visit('/')
 })
 
+Cypress.Commands.add('goToSingUp', () => {
+    cy.start()
+    cy.get('a[href="/register"]').click()
+    cy.contains('h2', 'Crie sua conta')
+        .should('be.visible')
+})
+
+Cypress.Commands.add('submitSingUpForm', (name, email, password) => {
+    cy.contains('label', 'Nome')
+        .parent()
+        .find('input')
+        .type(name)
+    cy.contains('label', 'E-mail')
+        .parent()
+        .find('input')
+        .type(email)
+    cy.contains('label', 'Senha')
+        .parent()
+        .find('input')
+        .type(password)
+        
+    cy.contains('button', 'Criar conta').click()
+})
+
 Cypress.Commands.add('submitLoginForm', (email, password) => {
     cy.start()
     cy.get('#email').type(email)
@@ -52,13 +76,13 @@ Cypress.Commands.add('login', (ui = false) => {
 
     if (ui === true) {
         cy.start()
-        cy.env(['username', 'password']).then(({ username, password }) => {
+        cy.env(['oneUsername', 'onePassword']).then(({ username, password }) => {
             cy.submitLoginForm(username, password)
         })
     } else {
         const token = 'e1033d63a53fe66c0fd3451c7fd8f617'
         const loginDate = dateFormatter(new Date())
-        
+
         cy.setCookie('login_date', loginDate)
         cy.visit('/dashboard', {
             onBeforeLoad(win) {

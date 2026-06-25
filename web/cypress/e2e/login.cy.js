@@ -3,14 +3,10 @@ const currentDate = new Date()
 
 describe('Login', () => {
 
-  beforeEach(() => {
-    cy.viewport('iphone-xr')
-  })
-
   it('Deve logar com sucesso', () => {
     cy.start()
-    cy.env(['username', 'password']).then(({ username, password }) => {
-      cy.submitLoginForm(username, password)
+    cy.env(['oneUsername', 'onePassword']).then(({ oneUsername, onePassword }) => {
+      cy.submitLoginForm(oneUsername, onePassword)
     })
 
     cy.get('[data-cy="user-name"]')
@@ -35,8 +31,8 @@ describe('Login', () => {
 
   it('Não deve logar com senha inválida', () => {
     cy.start()
-    cy.env(['username']).then(({ username }) => {
-      cy.submitLoginForm(username, 'invalid-password')
+    cy.env(['oneUsername']).then(({ oneUsername }) => {
+      cy.submitLoginForm(oneUsername, 'invalid-password')
     })
 
     cy.contains('Acesso negado! Tente novamente.')
@@ -45,8 +41,8 @@ describe('Login', () => {
 
   it('Não deve logar com email inválido', () => {
     cy.start()
-    cy.env(['password']).then(({ password }) => {
-      cy.submitLoginForm('invalid-email@webdojo.com', password)
+    cy.env(['onePassword']).then(({ onePassword }) => {
+      cy.submitLoginForm('invalid-email@webdojo.com', onePassword)
     })
 
     cy.contains('Acesso negado! Tente novamente.')
